@@ -9,6 +9,7 @@ const Port = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 
+//connect mongodb
 const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.USER_PASSWORD}@cluster0.ocr25uf.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
